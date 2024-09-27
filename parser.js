@@ -11,7 +11,7 @@ const path_data = (url) => {
 
 const parser = async (url, region) => {
     const browser = await puppeteer.launch({
-        args: ['--start-maximized'], headless: false
+        args: ['--start-maximized']
     })
     const page = await browser.newPage()
     await page.goto(url, { waitUntil: 'networkidle0' })
